@@ -1,0 +1,36 @@
+{
+    "name": "venomousboy/yii2-rest-api-captcha",
+    "description": "Simple captcha image generator for restful api",
+    "version": "1.0.0",
+    "type": "yii2-extension",
+    "keywords": [
+	"php71",
+        "yii2",
+        "captcha",
+        "restful",
+        "extension"
+    ],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/venomousboy/yii2-rest-api-captcha/issues",
+        "source": "https://github.com/venomousboy/yii2-rest-api-captcha"
+    },
+    "authors": [
+        {
+            "name": "Deykhin Vladislav",
+            "email": "deykhin@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "venomousboy\\yii2-rest-api-captcha\\": ""
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "yiisoft/yii2": "*"
+    }
+}

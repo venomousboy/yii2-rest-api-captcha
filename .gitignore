@@ -1,0 +1,9 @@
+# PhpStorm project files
+.idea
+
+# Mac DS_Store Files
+.DS_Store
+
+# Composer
+/vendor
+composer.lock
