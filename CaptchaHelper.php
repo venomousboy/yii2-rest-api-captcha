@@ -26,7 +26,7 @@ class CaptchaHelper extends CaptchaAction
     public function generateImage(): string
     {
         $base64 = "data:image/png;base64," . base64_encode($this->renderImage($this->generateCode()));
-        Yii::$app->session->set($this->generateSessionKey($this->generateCode()), $this->generateCode());
+        Yii::$app->cache->set($this->generateSessionKey($this->generateCode()), $this->generateCode());
         return $base64;
     }
 
@@ -49,7 +49,7 @@ class CaptchaHelper extends CaptchaAction
      */
     public function verify(string $code): bool
     {
-        if (Yii::$app->session->get($this->generateSessionKey($code)) === $code) {
+        if (Yii::$app->cache->get($this->generateSessionKey($code)) === $code) {
             return true;
         }
 
