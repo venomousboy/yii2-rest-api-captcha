@@ -26,7 +26,7 @@ class CaptchaHelper extends CaptchaAction
     public function generateImage(): string
     {
         $base64 = "data:image/png;base64," . base64_encode($this->renderImage($this->generateCode()));
-        Yii::$app->cache->set($this->generateSessionKey($this->generateCode()), $this->generateCode());
+        Yii::$app->cache->set($this->generateSessionKey($this->generateCode()), $this->generateCode(), 60);
         return $base64;
     }
 
